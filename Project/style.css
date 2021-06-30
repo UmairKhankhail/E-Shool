@@ -1,37 +1,103 @@
-*{
-    margin:0;
-    padding: 0;
-}
-#main-header{
-     background-color:blue;
-}
-
-#navbar li a{
-    padding: 20%;
-}
-
-#navbar a{
-    text-decoration: none;
-    color: cornsilk;
-}
-
-#navbar ul{
-    display:flex;
-}
-
 body {
-    color: mediumspringgreen;
+    background-color: slategrey;
+    color: #555;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
+    font-size: 16px;
+    line-height: 1.6em;
+    margin: 0;
 }
 
 .container {
-    width:100%;
+    width: 80%;
     margin: auto;
     overflow: hidden;
 }
 
+#main-header {
+    background-color: #333;
+    color: #708090;
+    border-top: rgb(175, 141, 53) solid;
+    border-left: rgb(175, 141, 53) solid;
+    border-right: rgb(175, 141, 53) solid;
+    border-width: 5px;
+}
+
+#navbar {
+    background-color: #333;
+    border-bottom: rgb(175, 141, 53) solid;
+    border-left: rgb(175, 141, 53) solid;
+    border-right: rgb(175, 141, 53) solid;
+    border-width: 5px;
+}
+
+#navbar ul {
+    padding: 0;
+    list-style: none;
+}
+
+#navbar li {
+    display: inline;
+}
+
+#navbar a {
+    color: rgb(175, 141, 53);
+    text-decoration: none;
+    font-size: 18px;
+    padding-right: 15px;
+}
+
+#showcase {
+    background-image: url('../images/showcase.jpg');
+    background-position: center right;
+    min-height: 300px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#showcase h1 {
+    color: #fff;
+    font-size: 50px;
+    line-height: 1.6em;
+    padding-top: 30px;
+}
+
+#main {
+    float: left;
+    width: 70%;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+#sidebar {
+    float: right;
+    width: 30%;
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#main-footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
 #logo {
+    padding-top: 10px;
     display: flex;
     justify-content: center;
+}
+
+@media(max-width:600px) {
+    #main {
+        width: 100%;
+        float: none;
+    }
+    #sidebar {
+        width: 100%;
+        float: none;
+    }
 }
