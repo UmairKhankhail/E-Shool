@@ -6,8 +6,8 @@
      background-color:blue;
 }
 
-#navbar{
-    margin-top: 0%;
+#navbar li a{
+    padding: 20%;
 }
 
 #navbar a{
