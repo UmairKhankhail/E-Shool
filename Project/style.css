@@ -9,6 +9,12 @@ body {
     border-width: 5px;
 }
 
+#lock {
+    top: 0;
+    position: sticky;
+    z-index: 1000;
+}
+
 .container {
     width: 80%;
     margin: auto;
@@ -108,6 +114,7 @@ body {
     position: relative;
     max-width: 100%;
     margin: auto;
+    z-index: 10;
 }
 
 
