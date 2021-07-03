@@ -37,23 +37,46 @@
     <div class="container">
         <div id="contact_sections">
 
-            <section>
-                <form name="myForm" action="#" onsubmit="return Index()" method="post">
+            <section id=Login>
+                <form name="myForm" action="#" onsubmit="return verifyPassword()" method="post">
                     <fieldset>
 
                         <div id="LIT">
                             <label>Username</label><input type="text" name="name" placeholder="Enter Username" required><br>
                             <label>Email</label> <input type="email" name="email" placeholder="Enter Email" required><br>
-                            <label>Password</label><input type="password" name="password" placeholder="Enter Password" required><br>
-                            <input type="submit" value="Login">
-                        </div>
+                            <label>Password</label> <input type="password" id="password" value="" required>
+                            <span id="message" style="color:rgb(175, 141, 53)"> </span> <br><br>
 
-                    </fieldset>
+                            <input type="submit" value="Submit">
+                            <button type="reset" value="Reset">Reset</button>
+                </form>
+                </div>
+
+                </fieldset>
                 </form>
 
                 <script>
-                    function Index() {
-                        window.open("")
+                    function verifyPassword() {
+                        var pw = document.getElementById("password").value;
+                        //check empty password field
+                        if (pw == "") {
+                            document.getElementById("message").innerHTML = "**Fill the password please!";
+                            return false;
+                        }
+
+                        //minimum password length validation
+                        if (pw.length < 8) {
+                            document.getElementById("message").innerHTML = "**Password length must be atleast 8 characters";
+                            return false;
+                        }
+
+                        //maximum length of password validation
+                        if (pw.length > 15) {
+                            document.getElementById("message").innerHTML = "**Password length must not exceed 15 characters";
+                            return false;
+                        } else {
+                            alert("Password is correct");
+                        }
                     }
                 </script>
             </section>
