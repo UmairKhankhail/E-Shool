@@ -88,23 +88,13 @@ body {
     margin-top: 40px;
     border-top: rgb(175, 141, 53) solid;
     border-width: 5px;
+    text-transform: capitalize;
 }
 
 #logo {
     padding-top: 10px;
     display: flex;
     justify-content: center;
-}
-
-@media(max-width:600px) {
-    #main {
-        width: 100%;
-        float: none;
-    }
-    #sidebar {
-        width: 100%;
-        float: none;
-    }
 }
 
 * {
@@ -237,5 +227,44 @@ body {
     }
     to {
         opacity: 1
+    }
+}
+
+
+/* CSS for Contact.html */
+
+#contact_sections {
+    margin: auto;
+    padding: 10px;
+}
+
+#contact_sections h1 {
+    text-align: center;
+}
+
+#contact_sections form fieldset {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 15%;
+}
+
+#contact_sections form legend {
+    text-align: center;
+}
+
+@media(max-width:600px) {
+    #main {
+        width: 100%;
+        float: none;
+    }
+    #sidebar {
+        width: 100%;
+        float: none;
+    }
+    #contact_sections form fieldset {
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10%;
     }
 }
