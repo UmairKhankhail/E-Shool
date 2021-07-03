@@ -12,7 +12,7 @@ body {
 #lock {
     top: 0;
     position: sticky;
-    z-index: 1000;
+    z-index: 1;
 }
 
 .container {
@@ -111,7 +111,7 @@ body {
     position: relative;
     max-width: 100%;
     margin: auto;
-    z-index: 10;
+    z-index: -1;
 }
 
 
@@ -291,6 +291,7 @@ input[type=text],
 select,
 input[type=email],
 input[type=tel],
+input[type=password],
 #contact_sections form textarea {
     width: 100%;
     padding: 12px 20px;
@@ -331,5 +332,8 @@ input[type=submit]:hover {
     }
     #contact_sections form fieldset {
         margin: 0;
+    }
+    #lock {
+        position: relative;
     }
 }
