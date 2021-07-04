@@ -37,7 +37,7 @@
         <div id="contact_sections">
 
             <section id="SignUp">
-                <form name="myForm" action="#" onsubmit="return verifyPassword()" method="post">
+                <form name="myForm" action="#" onsubmit="return Reconfirm_Password()" method="post">
                     <fieldset>
 
                         <div id="LIT">
@@ -49,7 +49,7 @@
                             <small>FORMAT: 03XZ-YYYYYYY </small><br><br>
                             <label>Password</label> <input type="password" id="password" placeholder="Enter Password" value="" required>
                             <span id="message" style="color:rgb(175, 141, 53)"> </span> <br><br>
-                            <label>Re-Enter Password</label> <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                            <label>Re-Enter Password</label> <input type="password" id="re" placeholder="Repeat Password" name="psw-repeat" required>
                             <input type="submit" value="Submit">
                             <button id="reset" type="reset" value="Reset">Reset</button>
                         </div>
@@ -57,30 +57,7 @@
                     </fieldset>
                 </form>
 
-                <script>
-                    function verifyPassword() {
-                        var pw = document.getElementById("password").value;
-                        //check empty password field
-                        if (pw == "") {
-                            document.getElementById("message").innerHTML = "**Fill the password please!";
-                            return false;
-                        }
-
-                        //minimum password length validation
-                        if (pw.length < 8) {
-                            document.getElementById("message").innerHTML = "**Password length must be atleast 8 characters";
-                            return false;
-                        }
-
-                        //maximum length of password validation
-                        if (pw.length > 15) {
-                            document.getElementById("message").innerHTML = "**Password length must not exceed 15 characters";
-                            return false;
-                        } else {
-                            return window.open("index.html");
-
-                        }
-                    }
+                <script src="index.js">
                 </script>
             </section>
         </div>
