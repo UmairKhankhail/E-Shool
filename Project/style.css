@@ -52,7 +52,7 @@ body {
 #navbar a {
     color: rgb(175, 141, 53);
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     padding-right: 15px;
     font-weight: bold;
 }
@@ -94,7 +94,7 @@ body {
     border-top: rgb(175, 141, 53) solid;
     border-width: 5px;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
 }
 
