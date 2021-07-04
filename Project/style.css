@@ -9,6 +9,10 @@ body {
     border-width: 5px;
 }
 
+.lock_2 {
+    position: relative;
+}
+
 #lock {
     top: 0;
     position: sticky;
@@ -303,7 +307,8 @@ input[type=password],
     box-sizing: border-box;
 }
 
-input[type=submit] {
+input[type=submit],
+#reset {
     width: 100%;
     background-color: #555;
     color: rgb(175, 141, 53);
@@ -318,8 +323,9 @@ input[type=submit] {
     font-family: 'Times New Roman', Times, serif;
 }
 
-input[type=submit]:hover {
-    background-color: blanchedalmond;
+input[type=submit]:hover,
+#reset:hover {
+    background-color: whitesmoke;
 }
 
 #Login,
