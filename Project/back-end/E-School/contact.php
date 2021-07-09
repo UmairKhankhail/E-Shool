@@ -1,22 +1,5 @@
 <?php
 
-// Check For Submit
-if(filter_has_var(INPUT_POST, 'submit')){
-    // Get Form Data
-    $name = htmlspecialchars($_POST['name']);
-    $email = htmlspecialchars($_POST['email']);
-	$phone = htmlspecialchars($_POST['phone']);
-    $comment = htmlspecialchars($_POST['comment']);
-
-	echo $name;
-   
-    } else {
-        // Failed
-        $msg = 'Please fill in all fields';
-        $msgClass = 'alert-danger';
-    }
-
-
 ?>
 
 
@@ -64,17 +47,17 @@ if(filter_has_var(INPUT_POST, 'submit')){
             </section>
 
             <section>
-                <form name="myForm" action="contact.php"  method="post">
+            <form name="myForm" action="contact.php"  method="post">
                     <fieldset>
                         <legend>Contact Us</legend>
 
                         <div id="LIT">
-                            <label>Name</label><input type="text" name="name" placeholder="Enter Name"><br>
-                            <label>Email</label> <input type="email" name="email" placeholder="Enter Email"><br>
-                            <label>Phone</label><input type="tel" pattern="[0]{1}[3]{1}[0-9]{9}" name="phone" placeholder="Enter Phone Number"><br>
+                            <label>Name</label><input type="text" name="name" placeholder="Enter Name" required><br>
+                            <label>Email</label> <input type="email" name="email" placeholder="Enter Email" required><br>
+                            <label>Phone</label><input type="tel" pattern="[0]{1}[3]{1}[0-9]{9}" name="phone" placeholder="Enter Phone Number" required><br>
                             <small>FORMAT: 03XZ-YYYYYYY </small><br><br>
-                            <label>Comment</label><textarea name="comment" placeholder="Enter Details"></textarea><br>
-							<button type="submit" name="submit" >Submit</button>
+                            <label>Comment</label><textarea name="comment" placeholder="Enter Details" required></textarea><br>
+			     			<button type="submit" name="submit" >Submit</button>
                         </div>
 
                     </fieldset>
