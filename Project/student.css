@@ -21,11 +21,6 @@ body {
     z-index: 5;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
 
 #main-header {
     background-color: #333;
