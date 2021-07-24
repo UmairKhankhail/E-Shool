@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +17,60 @@
 </head>
 
 <body>
+<?php
+
+
+include ('dbConnection.php');
+
+//values retreive only when submit is clicked
+if (isset($_POST['submit'])){
+
+    $username=htmlspecialchars($_POST['username']);
+    $email=htmlspecialchars($_POST['email']);
+    $des=htmlspecialchars($_POST['des']);
+    $phone=htmlspecialchars($_POST['phone']);
+    $password=($_POST['password']);
+    $cpassword=($_POST['psw-repeat']);
+
+    $pass = password_hash($password, PASSWORD_BCRYPT);
+
+    $emailQuery = "SELECT * FROM `users` WHERE `email`='$email'";
+    $emailSqlQuery= mysqli_query($conn,$emailQuery);
+    $noOfEmailInRecord = mysqli_num_rows($emailSqlQuery);
+    if($noOfEmailInRecord>0){
+    ?>
+    <script>alert('Email Already Exists Change Email Address');</script>
+    <?php
+    }else{
+       
+        if($password === $cpassword){
+            $insertQuery= " INSERT INTO `users`(`username`, `email`, `designation`, `phone`, `password`) VALUES ('$username','$email','$des','$phone', '$password')";
+            $result = mysqli_query($conn,$insertQuery);
+            if($result){
+                ?>
+                  <script> alert('Data Inserted'); </script>
+                <?php   
+            }else{
+                ?>
+                  <script> alert('Data not Inserted'); </script>
+                <?php
+            }
+        }else{
+            ?>
+            <script>alert('Passwords Do Not Match');</script>
+            <?php
+        }
+
+       
+    }
+
+  
+   
+} 
+?>
+
+
+
     <div class="lock_2">
         <header id="main-header">
             <div class="container">
@@ -37,13 +97,13 @@
         <div id="contact_sections">
 
             <section id="SignUp">
-                <form name="myForm" action="#" onsubmit="return Reconfirm_Password()" method="post">
+                <form name="myForm" action="<?php echo htmlentities($_SERVER['PHP_SELF']) ?>" onsubmit="return Reconfirm_Password()" method="post">
                     <fieldset>
 
                         <div id="LIT">
 
 
-                            <label>Username</label><input type="text" name="name" placeholder="Enter Username" required><br>
+                            <label>Username</label><input type="text" name="username" placeholder="Enter Username" required><br>
                             <label>Email</label> <input type="email" name="email" placeholder="Enter Email" required><br>
                             <label>Designation</label>
                             <select name="des" id="des">
@@ -54,7 +114,7 @@
                             <br><br><br>
                             <label>Phone</label><input type="tel" pattern="[0]{1}[3]{1}[0-9]{9}" name="phone" placeholder="Enter Phone Number" required><br>
                             <small>FORMAT: 03XZ-YYYYYYY </small><br><br>
-                            <label>Password</label> <input type="password" id="password" placeholder="Enter Password" value="" required>
+                            <label>Password</label> <input type="password" id="password" name="password" placeholder="Enter Password" value="" required>
                             <span id="message" style="color:rgb(175, 141, 53)"> </span> <br><br>
                             <label>Re-Enter Password</label> <input type="password" id="re" placeholder="Repeat Password" name="psw-repeat" required>
 							<button type="submit" name="submit" class="Submit">Submit</button>

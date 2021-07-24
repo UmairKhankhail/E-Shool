@@ -1,5 +1,29 @@
 <?php
+session_start();
+include ('dbConnection.php');
 
+//values retreive only when submit is clicked
+if (isset($_POST['submit'])){
+
+    $name=htmlspecialchars($_POST['name']);
+    $email=htmlspecialchars($_POST['email']);
+    $phone=htmlspecialchars($_POST['phone']);
+    $comment=htmlspecialchars($_POST['comment']);
+
+    $insertQuery= " INSERT INTO `contact`(`name`, `email`, `phone`, `comment`) VALUES ('$name','$email','$phone','$comment')";
+    
+    $result = mysqli_query($conn,$insertQuery);
+    if($result){
+        ?>
+          <script> alert('Data Inserted'); </script>
+        <?php   
+    }else{
+        ?>
+          <script> alert('Data not Inserted'); </script>
+        <?php
+    }
+   
+} 
 ?>
 
 
@@ -47,7 +71,7 @@
             </section>
 
             <section>
-            <form name="myForm" action="contact.php"  method="post">
+            <form name="myForm" action="<?php echo htmlentities($_SERVER['PHP_SELF']) ?>"  method="post">
                     <fieldset>
                         <legend>Contact Us</legend>
 
@@ -75,5 +99,3 @@
     </footer>
 
 </body>
-
-
