@@ -50,6 +50,7 @@ if (isset($_POST['submit'])){
                 ?>
                   <script> alert('Data Inserted'); </script>
                 <?php   
+                header('location:login.php');
             }else{
                 ?>
                   <script> alert('Data not Inserted'); </script>
@@ -84,7 +85,7 @@ if (isset($_POST['submit'])){
             <div class="container">
 
                 <ul>
-                <li><a href="index.php">Home</a></li>
+                    <li><a href="../index.php">Home</a></li>
                     <li><a href="contact.php">Contact</a></li>
                     <li><a href="login.php">Login</a></li>
                     <li><a href="signup.php">Sign up</a></li>
@@ -109,7 +110,6 @@ if (isset($_POST['submit'])){
                             <select name="des" id="des">
                               <option value="Student">Student</option>
                               <option value="Teacher">Teacher</option>
-                              <option value="Admin">Admin</option>
                             </select>
                             <br><br><br>
                             <label>Phone</label><input type="tel" pattern="[0]{1}[3]{1}[0-9]{9}" name="phone" placeholder="Enter Phone Number" required><br>

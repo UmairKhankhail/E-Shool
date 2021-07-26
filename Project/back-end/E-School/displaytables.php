@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION['username'])){
+    header('location:login.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,11 +20,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="images/logo.png">
 
-    <link type="text/css" href="style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="script/jquery.mousewheel.js"></script>
-    <script type="text/javascript" src="script/jquery.jscrollpane.min.js"></script>
-
+    
 </head>
 
 <body class="bodyfortable">
@@ -25,7 +31,11 @@
                     <img src="images/logo.png" alt="E-SCHOOL LOGO" width="100" height="100">
                 </div>
             </div>
-
+            <div class="container">
+                <div class="logout">
+                <button class="LogoutButton"><a href="logout.php">Logout</a></button>
+            </div>
+            </div>
         </header>
         
     </div>
@@ -35,7 +45,7 @@
      <h1>Contact Requests Table</h1>
          <div class="table" >
              <table>
-                 <thead>
+                 <thead >
                        <tr>
                          <th class="contact_id">contact_id</th>
                          <th>name</th>

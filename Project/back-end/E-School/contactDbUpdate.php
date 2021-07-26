@@ -25,9 +25,7 @@
             <div class="container">
 
                 <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-                    <li><a href="displaytables.php">Table Data</a></li>
+                    <li><a href="displaytables.php">Back to Table Data</a></li>
                 </ul>
             </div>
         </nav>
@@ -66,7 +64,7 @@ if (isset($_POST['submit'])){
     $result = mysqli_query($conn,$updateQuery);
     if($result){
         ?>
-          <script> alert('Data Updated'); </script>
+          <script> alert('Data Updated'); window.location="displaytables.php"; </script>
         <?php   
     }else{
         ?>

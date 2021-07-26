@@ -11,153 +11,8 @@ body {
     border-width: 5px;
 }
 
-h1 {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.logout {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 5px;
-}
-
-.LogoutButton {
-    color: #555;
-    background-color: rgb(175, 141, 53);
-    padding: 6px 10px;
-    margin: 2px 2px 2px 2px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 20px;
-    text-transform: uppercase;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.LogoutButton a {
-    text-decoration: none;
-    text-align: center;
-    font-weight: bold;
-    color: #333;
-}
-
-.LogoutButton a:visited {
-    color: #333;
-}
-
-.LogoutButton a:hover {
-    color: whitesmoke;
-}
-
-.bodyfortable {
-    background-color: #222;
-    color: rgb(175, 141, 53);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 1.6em;
-    margin: auto;
-    border: none;
-}
-
-.table {
-    margin-top: 100px;
-    text-align: start;
-    overflow: scroll;
-    scrollbar-color: rebeccapurple green;
-    overflow: auto;
-    margin-bottom: 60px;
-    max-height: 300px;
-}
-
-.table table {
-    border: 0;
-    border-spacing: 0;
-    border-collapse: collapse;
-    table-layout: fixed;
-    width: 100%;
-}
-
-.table th,
-td {
-    padding: 8px 30px;
-    color: rgb(175, 141, 53);
-    border: 2px solid rgb(175, 141, 53);
-    width: 275px;
-    height: 50px;
-    text-align: center;
-}
-
-.table th:nth-child(1),
-td:nth-child(1) {
-    padding: 8px 30px;
-    color: rgb(175, 141, 53);
-    border: 2px solid rgb(175, 141, 53);
-    border-left: 4px solid rgb(175, 141, 53);
-    width: 170px;
-    height: 50px;
-    text-align: center;
-}
-
-.table th:nth-child(1) {
-    border-top: 4px solid rgb(175, 141, 53);
-    border-bottom: 4px solid rgb(175, 141, 53);
-    background-color: #333;
-}
-
-.table th {
-    text-transform: uppercase;
-    font-weight: 500;
-    position: sticky;
-    z-index: 1;
-    border-top: 4px solid rgb(175, 141, 53);
-    border-bottom: 4px solid rgb(175, 141, 53);
-    font-weight: 600;
-    background-color: #333;
-}
-
-.table td {
-    font-size: 16px;
-    text-align: center;
-}
-
-.table td:nth-last-child(1) {
-    border-right: 4px solid rgb(175, 141, 53);
-}
-
-.fa {
-    color: gold;
-}
-
-.fa:active {
-    color: aquamarine;
-}
-
-.fa:visited {
-    color: gold;
-}
-
-.contact_id,
-.user_id {
-    border: 4px solid rgb(175, 141, 53);
-}
-
 .lock_2 {
     position: relative;
-}
-
-#lock_3 header {
-    border-bottom: 5px rgb(175, 141, 53) solid;
-    border-left: 5px rgb(175, 141, 53) solid;
-    border-right: 5px rgb(175, 141, 53) solid;
-}
-
-#lockStudent {
-    top: 0;
-    position: sticky;
-    z-index: 5;
-    border-bottom: 5px solid rgb(175, 141, 53);
 }
 
 #lock {
@@ -168,12 +23,6 @@ td:nth-child(1) {
 
 .container {
     width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-
-.containerfortimetable {
-    width: 95%;
     margin: auto;
     overflow: hidden;
 }
@@ -215,10 +64,6 @@ td:nth-child(1) {
     color: blanchedalmond;
 }
 
-#navbar a:active {
-    color: blanchedalmond;
-}
-
 #showcase {
     padding: 0em;
 }
@@ -230,7 +75,6 @@ td:nth-child(1) {
     box-sizing: border-box;
     color: rgb(175, 141, 53);
     font-size: 20px;
-    text-align: justify;
 }
 
 #sidebar {
@@ -242,27 +86,6 @@ td:nth-child(1) {
     box-sizing: border-box;
     border: rgb(175, 141, 53) solid;
     border-width: 5px;
-}
-
-#sidebar p {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    text-align: justify;
-}
-
-#sidebar ul {
-    list-style: none;
-    padding-left: 30px;
-}
-
-#sidebar h3 {
-    padding-left: 80px;
-    padding-top: 5px;
-}
-
-#sidebar ul li::before {
-    content: '✓';
 }
 
 #main-footer {
@@ -487,7 +310,7 @@ input[type=password],
     box-sizing: border-box;
 }
 
-button[type=submit],
+input[type=submit],
 #reset {
     width: 100%;
     background-color: #555;
@@ -503,7 +326,7 @@ button[type=submit],
     font-family: 'Times New Roman', Times, serif;
 }
 
-button[type=submit]:hover,
+input[type=submit]:hover,
 #reset:hover {
     background-color: whitesmoke;
 }
@@ -511,129 +334,6 @@ button[type=submit]:hover,
 #Login,
 #SignUp {
     margin-top: 30px;
-}
-
-#display_section1 {
-    padding: 20px;
-    border-bottom: rgb(175, 141, 53) solid 2px;
-}
-
-
-/* Scrollbar style for Chrome */
-
-
-/* Track */
-
-::-webkit-scrollbar {
-    width: 14px;
-    height: 14px;
-}
-
-::-webkit-scrollbar-track {
-    background: #303030;
-    border: solid 2px rgba(33, 33, 33, 0.5);
-}
-
-
-/* Thumb */
-
-::-webkit-scrollbar-thumb {
-    background: #404040;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #505050;
-}
-
-::-webkit-scrollbar-thumb:active {
-    background: #404040;
-}
-
-::-webkit-scrollbar-thumb:vertical {
-    border-top: solid 2px rgba(33, 33, 33, 0.5);
-    border-bottom: solid 2px rgba(33, 33, 33, 0.5);
-}
-
-::-webkit-scrollbar-thumb:horizontal {
-    border-right: solid 2px rgba(33, 33, 33, 0.5);
-    border-left: solid 2px rgba(33, 33, 33, 0.5);
-}
-
-
-/* Buttons */
-
-::-webkit-scrollbar-button {
-    border-style: solid;
-    height: 16px;
-    width: 16px;
-}
-
-
-/* Up */
-
-::-webkit-scrollbar-button:vertical:decrement {
-    border-width: 0 7px 14px 7px;
-    border-color: transparent transparent silver transparent;
-}
-
-::-webkit-scrollbar-button:vertical:decrement:hover {
-    border-color: transparent transparent silver transparent;
-}
-
-
-/* Down */
-
-::-webkit-scrollbar-button:vertical:increment {
-    border-width: 14px 7px 0 7px;
-    border-color: silver transparent transparent transparent;
-}
-
-::-webkit-scrollbar-button:vertical:increment:hover {
-    border-color: silver transparent transparent transparent;
-}
-
-
-/* Left */
-
-::-webkit-scrollbar-button:horizontal:decrement {
-    border-width: 7px 14px 7px 0;
-    border-color: transparent silver transparent transparent;
-}
-
-::-webkit-scrollbar-button:horizontal:decrement:hover {
-    border-color: transparent silver transparent transparent;
-}
-
-
-/* Right */
-
-::-webkit-scrollbar-button:horizontal:increment {
-    border-width: 7px 0 7px 14px;
-    border-color: transparent transparent transparent silver;
-}
-
-::-webkit-scrollbar-button:horizontal:increment:hover {
-    border-color: transparent transparent transparent silver;
-}
-
-::-webkit-scrollbar-corner {
-    background-color: #222;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: slategray;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: slategray;
-}
-
-::-webkit-scrollbar-track-piece {
-    background-color: #555;
-}
-
-::-webkit-scrollbar-track {
-    background-color: rgb(175, 141, 53);
 }
 
 @media(max-width:600px) {

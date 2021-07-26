@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION['username'])){
+    header('location:login.php');
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,14 +24,18 @@
 
 <body>
 
-    <div id="lock">
+    <div id="lockStudent">
         <header id="main-header">
             <div class="container">
                 <div id="logo">
                     <img src="images/logo.png" alt="E-SCHOOL LOGO" width="100" height="100">
                 </div>
             </div>
-
+            <div class="container">
+                <div class="logout">
+                <button class="LogoutButton"><a href="logout.php">Logout</a></button>
+            </div>
+            </div>
 
         </header>
 
@@ -187,7 +202,7 @@
 
 </section>
     </div>
-
+ 
 
     <footer id="main-footer">
         <p>Copyright &copy;2021 E-School</p>
