@@ -45,7 +45,7 @@ if(!isset($_SESSION['username'])){
      <h1>Contact Requests Table</h1>
          <div class="table" >
              <table>
-                 <thead >
+                 <thead  id="locktable">
                        <tr>
                          <th class="contact_id">contact_id</th>
                          <th>name</th>

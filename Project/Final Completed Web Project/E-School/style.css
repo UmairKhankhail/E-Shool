@@ -64,11 +64,10 @@ h1 {
 .table {
     margin-top: 100px;
     text-align: start;
-    overflow: scroll;
-    scrollbar-color: rebeccapurple green;
-    overflow: auto;
     margin-bottom: 60px;
     max-height: 300px;
+    overflow: scroll;
+    overflow: auto;
 }
 
 .table table {
@@ -115,6 +114,7 @@ td:nth-child(1) {
     border-bottom: 4px solid rgb(175, 141, 53);
     font-weight: 600;
     background-color: #333;
+    top: 0;
 }
 
 .table td {
