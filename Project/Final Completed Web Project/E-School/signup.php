@@ -33,21 +33,9 @@ if (isset($_POST['submit'])){
     $cpassword=($_POST['psw-repeat']);
 
     $pass = password_hash($password, PASSWORD_BCRYPT);
-
-    require_once 'VerifyEmailClass.php'; 
-    $mail = new VerifyEmail();
-    $mail->setStreamTimeoutWait(5);
-    $mail->Debug= FALSE; 
-    $mail->Debugoutput= 'html'; 
-    $mail->setEmailFrom('siddraamiz@email.com');
-    $emailC = $email; 
-    
-    if($mail->check($emailC)){ 
-        echo 'Email &lt;'.$emailC.'&gt; is valid, and exist!';
-
-        $emailQuery = "SELECT * FROM `users` WHERE `email`='$email'";
-        $emailSqlQuery= mysqli_query($conn,$emailQuery);
-        $noOfEmailInRecord = mysqli_num_rows($emailSqlQuery); 
+     $emailQuery = "SELECT * FROM `users` WHERE `email`='$email'";
+     $emailSqlQuery= mysqli_query($conn,$emailQuery);
+     $noOfEmailInRecord = mysqli_num_rows($emailSqlQuery); 
         
         if($noOfEmailInRecord>0){
             ?>
@@ -76,14 +64,6 @@ if (isset($_POST['submit'])){
         
                
         }
-        
-    }elseif(verifyEmail::validate($emailC)){ 
-    echo 'Email &lt;'.$emailC.'&gt; is valid, but not exist!';
-    
-    }else{ 
-    echo 'Email &lt;'.$emailC.'&gt; is not valid and not exist!';} 
-
-
     
     
   
