@@ -1,0 +1,157 @@
+body {
+    background-color: #555;
+    color: rgb(175, 141, 53);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6em;
+    margin: 0;
+    border-left: rgb(175, 141, 53) solid;
+    border-right: rgb(175, 141, 53) solid;
+    border-bottom: rgb(175, 141, 53) solid;
+    border-width: 5px;
+}
+
+#lockT {
+    top: 0;
+    position: sticky;
+    z-index: 5;
+    border-bottom: 5px solid rgb(175, 141, 53);
+}
+
+.logout {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+}
+
+.LogoutButton {
+    color: #555;
+    background-color: rgb(175, 141, 53);
+    padding: 6px 10px;
+    margin: 2px 2px 2px 2px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.LogoutButton a {
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+.LogoutButton a:visited {
+    color: #333;
+}
+
+.LogoutButton a:hover {
+    color: whitesmoke;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#main-header {
+    background-color: #333;
+    color: #708090;
+    border-top: rgb(175, 141, 53) solid;
+    border-width: 5px;
+}
+
+#navbar {
+    background-color: #333;
+    border-bottom: rgb(175, 141, 53) solid;
+    border-width: 5px;
+    text-transform: uppercase;
+}
+
+#navbar ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+#navbar li {
+    display: inline;
+}
+
+#navbar a {
+    color: rgb(175, 141, 53);
+    text-decoration: none;
+    font-size: 16px;
+    padding-right: 15px;
+    font-weight: bold;
+}
+
+#navbar a:hover {
+    color: blanchedalmond;
+}
+
+#showcase {
+    padding: 0em;
+}
+
+#main {
+    float: left;
+    width: 70%;
+    padding: 0 30px;
+    box-sizing: border-box;
+    color: rgb(175, 141, 53);
+    font-size: 20px;
+}
+
+#sidebar {
+    float: right;
+    width: 30%;
+    background: #333;
+    color: rgb(175, 141, 53);
+    padding: 10px;
+    box-sizing: border-box;
+    border: rgb(175, 141, 53) solid;
+    border-width: 5px;
+}
+
+#main-footer {
+    background: #333;
+    color: rgb(175, 141, 53);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: rgb(175, 141, 53) solid;
+    border-width: 5px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#logo {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+@media(max-width:600px) {
+    #main {
+        width: 100%;
+        float: none;
+    }
+    #sidebar {
+        width: 100%;
+        float: none;
+    }
+    #contact_sections form fieldset {
+        margin: 0;
+    }
+    #lock {
+        position: relative;
+    }
+}
